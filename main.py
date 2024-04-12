@@ -9,7 +9,7 @@ CORS(app)
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
 app.run(host="0.0.0.0", port=port)
-@app.route('/api/login', methods=['POST'])
+#@app.route('/api/login', methods=['POST'])
 
 def api_login():
     data = request.get_json()
