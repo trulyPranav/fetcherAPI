@@ -4,10 +4,10 @@ import requests
 from flask_cors import CORS
 
 app = Flask(__name__)
-
 CORS(app)
 
 @app.route('/api/login', methods=['POST'])
+
 def api_login():
     data = request.get_json()
     username = data.get('username')
@@ -53,6 +53,3 @@ def api_login():
             return jsonify({'error': 'Error fetching profile or subject data.'}), 400
     else:
         return jsonify({'error': 'Login failed. Please check your credentials.'}), 400
-
-if __name__ == '__main__':
-    app.run(port=5000, debug=True)
