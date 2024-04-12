@@ -2,14 +2,14 @@ from flask import Flask, request, jsonify
 from bs4 import BeautifulSoup
 import requests
 from flask_cors import CORS
-import os
-port = int(os.environ.get("PORT", 5000))
+#import os
+#port = int(os.environ.get("PORT", 5000))
 app = Flask(__name__)
 CORS(app)
-if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+#if __name__ == "__main__":
+#    app.run(host="0.0.0.0")
 app.run(host="0.0.0.0", port=port)
-#@app.route('/api/login', methods=['POST'])
+@app.route('/api/login', methods=['POST'])
 
 def api_login():
     data = request.get_json()
