@@ -26,11 +26,11 @@ Provide your localhost as the url. Send out a POST request.
 
 Should look something like this:
 
-<code>
+
 { 
    "username" : "230xxx",
    "password" : "yourPassword"
-} 
-</code>
+}
+
 
 This should work or await an appropriate error message. 
